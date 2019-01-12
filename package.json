@@ -1,0 +1,23 @@
+{
+  "name": "shopify-backend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DB_USER=admin DB_PWD=Kidoryb9- DB_HOST=35.203.127.245 DB_NAME=store JWT_SECRET=3yy65mzklt2IDkM1R6N nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "express-jwt": "^5.3.1",
+    "graphql": "^14.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "nodemon": "^1.18.9",
+    "pg": "^7.7.1"
+  }
+}
