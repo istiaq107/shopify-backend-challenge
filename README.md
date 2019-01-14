@@ -11,6 +11,9 @@ I completed this challenge using GraphQL implemented in Node.js to create the se
 5. Authentication(extra extra credit)
 
 ## 1. Database schema
+
+(In case there's problems connecting with the database, the dump is inluded in the dump.sql file)
+
 The database tables and there corresponding columns are as follows-
 1. carts - purpose is to demo the bonus requirement
     * id - primary key
