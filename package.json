@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "DB_USER=admin DB_PWD=Kidoryb9- DB_HOST=35.203.127.245 DB_NAME=store JWT_SECRET=3yy65mzklt2IDkM1R6N nodemon server.js",
+    "start": "JWT_SECRET=3yy65mzklt2IDkM1R6N nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

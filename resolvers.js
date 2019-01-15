@@ -4,16 +4,19 @@ var jsonwebtoken = require('jsonwebtoken')
 
 
 db = new Client({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    //password: process.env.DB_PWD
+    user: "librarian",
+    host: "localhost",
+    database: "postgres",
+    password: "password"
 });
 db.connect()
 
-db.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
-})
+// if database is connected, will give out the time
+db.connect().then(res => {
+        console.log("Database connected")
+    }).catch(err => {
+        console.log('ERROR:', err.message || err);
+});
 
 ///////////////// auth resolvers /////////////////
 var signin = async function({ username, password }) {
