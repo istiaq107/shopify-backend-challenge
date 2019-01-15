@@ -150,7 +150,7 @@ var purchase = function({ product_id }) {
         if (res.rowCount == 0) throw new Error("invalid product id")
         count = res.rows[0]["inventory_count"]
         if (count > 0) {
-            return db.query('UPDATE products SET inventory_count = inventory_count - 1 WHERE id=$1 RETURNING id, title, price, inventory_count', [product_id]).then((res) => {return res.rows[0]})
+            return db.query('UPDATE products SET inventory_count = inventory_count - 1 WHERE id=$1 RETURNING id, title, price, inventory_count', [product_id]).then((res) => res.rows[0])
         } else {
             throw new Error("product has no inventory")
         }
