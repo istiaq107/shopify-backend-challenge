@@ -1,5 +1,6 @@
 CREATE USER librarian;
 ALTER USER librarian WITH PASSWORD 'password';
+ALTER USER librarian SUPERUSER;
 GRANT ALL PRIVILEGES ON carts,users,products TO librarian;
 
 DROP TABLE IF EXISTS "public"."users";
