@@ -1,12 +1,6 @@
--- -------------------------------------------------------------
--- TablePlus 1.0(170)
---
--- https://tableplus.com/
---
--- Database: store
--- Generation Time: 2019-01-14 16:47:08.7530
--- -------------------------------------------------------------
-
+CREATE USER librarian;
+ALTER USER librarian WITH PASSWORD 'password';
+GRANT ALL ON carts,users,products TO librarian;
 
 DROP TABLE IF EXISTS "public"."users";
 -- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
