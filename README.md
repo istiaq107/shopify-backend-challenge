@@ -38,10 +38,9 @@ The database tables and there corresponding columns are as follows-
 2. `cd shopify-backend-challenge`
 3. `chmod +x  mac_setup.sh` or `chmod +x ubuntu_setup.sh` (depending on what machine you're on)
 4. `./mac_setup.sh` or `ubuntu_setup.sh` (ditto)
+5. Visit the url http://localhost:8080/graphql
 
 *Note - the bash script `*_setup.sh` just installs postgres, sets up the user, imports the sql dump into the database, installs npm packages, and starts it*
-
-Run `npm install` and then start the app with `npm start` to make sure database access credentials are passed as env variables. Visit the url http://localhost:8080/graphql which opens the graphql console.
 
 ## 3. Basic Requirement
 
