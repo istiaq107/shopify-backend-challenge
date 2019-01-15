@@ -1,19 +1,16 @@
 # Shopify Backend Challenge
 
 ## Overview
-I completed this challenge using GraphQL implemented in Node.js to create the server API that connects to a psql database hosted in Google Cloud.
+I completed this challenge using GraphQL implemented in Node.js to create the server API that connects to a psql database.
 
 ## Content
 1. Database schema
-2. Packages installation and startup
+2. Installation and startup
 3. Basic requirement
 4. Extra credit
 5. Authentication(extra extra credit)
 
 ## 1. Database schema
-
-(In case there's problems connecting with the database, the dump is inluded in the dump.sql file)
-
 The database tables and there corresponding columns are as follows-
 1. carts - purpose is to demo the bonus requirement
     * id - primary key
@@ -37,6 +34,13 @@ The database tables and there corresponding columns are as follows-
 *Note - the carts table is so that you can just create a new cart, and add items, or checkout(fulfilling the bonus requirement). The cart in the users table is specific to just that user as I've added authentication, so you can sign in as a user, and add items to your own cart(just an extra functionility possible with the addition of authentication - extra bonus requirement).*
 
 ## 2. Package installation and Startup
+1. `git clone https://github.com/istiaq107/shopify-backend-challenge`
+2. `cd shopify-backend-challenge`
+3. `chmod +x  mac_setup.sh` or `chmod +x ubuntu_setup.sh` (depending on what machine you're on)
+4. `./mac_setup.sh` or `ubuntu_setup.sh` (ditto)
+
+*Note - the bash script `*_setup.sh` just installs postgres, sets up the user, imports the sql dump into the database, installs npm packages, and starts it*
+
 Run `npm install` and then start the app with `npm start` to make sure database access credentials are passed as env variables. Visit the url http://localhost:8080/graphql which opens the graphql console.
 
 ## 3. Basic Requirement

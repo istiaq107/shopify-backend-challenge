@@ -15,7 +15,7 @@ db.connect().then(res => {
     console.log('ERROR:', err.message || err);
 });
 
-db.query('SELECT * FROM carts;').then(res => console.log(res.rows))
+// db.query('SELECT * FROM carts;').then(res => console.log(res.rows))
 
 ///////////////// auth resolvers /////////////////
 var signin = async function({ username, password }) {
