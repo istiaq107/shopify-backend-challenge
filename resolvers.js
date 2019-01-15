@@ -2,20 +2,17 @@ var { Client } = require('pg');
 var bcrypt = require('bcrypt')
 var jsonwebtoken = require('jsonwebtoken')
 
-
 db = new Client({
     user: "librarian",
     host: "localhost",
     database: "postgres",
     password: "password"
 });
-db.connect()
 
-// if database is connected, will give out the time
 db.connect().then(res => {
-        console.log("Database connected")
-    }).catch(err => {
-        console.log('ERROR:', err.message || err);
+    console.log("Database connected")
+}).catch(err => {
+    console.log('ERROR:', err.message || err);
 });
 
 ///////////////// auth resolvers /////////////////
